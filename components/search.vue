@@ -43,7 +43,7 @@
                                 v-for="(app, i) in results"
                                 :key="`${app.slug}-${i}`"
                             >
-                                <LazyHydrate when-visible>
+                                <LazyHydrate :on-interaction="['click', 'touchstart']">
                                     <SearchItem
                                         :app="app"
                                     />
