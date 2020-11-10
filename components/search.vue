@@ -11,7 +11,7 @@
                 placeholder="Type to Search"
                 autocomplete="off"
                 @keyup="queryResults(query); scrollInputToTop()"
-                @focus="hasFocused = true"
+                @focus="hydrated = true"
             >
             <div class="search-input-separator border-white border-t-2" />
             <div class="quick-buttons overflow-x-auto whitespace-no-wrap py-2 space-x-2">
@@ -44,9 +44,13 @@
                                 v-for="(app, i) in results"
                                 :key="`${app.slug}-${i}`"
                             >
-                                <SearchItem
-                                    :app="app"
-                                />
+                                <LazyHydrate
+                                    when-visible
+                                >
+                                    <SearchItem
+                                        :app="app"
+                                    />
+                                </LazyHydrate>
                             </li>
 
                         </ul>
@@ -64,7 +68,7 @@ import LazyHydrate from 'vue-lazy-hydration'
 
 import appList from '~/assets/app-list.json'
 
-import SearchItem from './search-item.vue'
+// import SearchItem from './search-item.vue'
 
 // import overlayStore from './mixins/store'
 // import modalRouter from '~/components/modals/mixins/router'
@@ -77,7 +81,7 @@ import SearchItem from './search-item.vue'
 export default {
     components: {
         LazyHydrate,
-        SearchItem
+        SearchItem: () => import('./search-item.vue'),
     },
     props: {
         appList: {
@@ -119,7 +123,7 @@ export default {
             titleContainsResults: [],
             sectionContainsResults: [],
 
-            hasFocused: false
+            hydrated: false
         }
     },
     computed: {
@@ -149,8 +153,11 @@ export default {
     //         }
     //     }
     // },
-    // mounted () {
-    // },
+    mounted () {
+        console.log('mounted')
+
+        this.hydrated = true
+    },
     methods: {
         // Search priorities
         titleStartsWith (query, app) {
