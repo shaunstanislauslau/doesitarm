@@ -9,9 +9,9 @@
                 class="appearance-none w-full text-white font-hairline sm:text-5xl outline-none bg-transparent p-3"
                 type="search"
                 placeholder="Type to Search"
-                autofocus
                 autocomplete="off"
                 @keyup="queryResults(query); scrollInputToTop()"
+                @focus="hasFocused = true"
             >
             <div class="search-input-separator border-white border-t-2" />
             <div class="quick-buttons overflow-x-auto whitespace-no-wrap py-2 space-x-2">
@@ -39,16 +39,16 @@
                             >
                                 No apps found
                             </li>
+
                             <li
                                 v-for="(app, i) in results"
                                 :key="`${app.slug}-${i}`"
                             >
-                                <LazyHydrate :on-interaction="['click', 'touchstart']">
-                                    <SearchItem
-                                        :app="app"
-                                    />
-                                </LazyHydrate>
+                                <SearchItem
+                                    :app="app"
+                                />
                             </li>
+
                         </ul>
                     </div>
 
@@ -118,7 +118,8 @@ export default {
             titleStartsWithResults: [],
             titleContainsResults: [],
             sectionContainsResults: [],
-            // store: overlayStore.state
+
+            hasFocused: false
         }
     },
     computed: {
