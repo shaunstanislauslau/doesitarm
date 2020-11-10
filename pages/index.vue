@@ -8,11 +8,9 @@
                 Apps that are reported to support Apple Silicon
             </h2>
 
-            <LazyHydrate :on-interaction="['click', 'touchstart']">
-                <Search />
-            </LazyHydrate>
+            <Search />
 
-            <LazyHydrate :on-interaction="['click', 'touchstart']">
+            <LazyHydrate on-interaction>
                 <LinkButton
                     href="https://github.com/ThatGuySam/doesitarm/issues"
                 >
@@ -27,13 +25,14 @@
 import LazyHydrate from 'vue-lazy-hydration'
 
 import Search from '~/components/search.vue'
-import LinkButton from '~/components/link-button.vue'
+// import LinkButton from '~/components/link-button.vue'
 
 export default {
     components: {
         LazyHydrate,
         Search,
-        LinkButton
+        // Search: () => import('~/components/search.vue'),
+        LinkButton: () => import('~/components/link-button.vue'),
     }
 }
 </script>
