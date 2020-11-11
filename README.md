@@ -5,6 +5,12 @@ Lists of reported app support for macOS on ARM so far.
 
 Any comments, suggestions? [Let us know!](https://github.com/ThatGuySam/doesitarm/issues). PRs welcome :) 
 
+## Legend
+* ✅ Full Native Apple Silicon Support
+* ✳️ Can run well enough via Rosetta or some other caveat
+* ⏹ Expected to be supported when Apple Silicon is available
+* 🚫 Not yet supported only works on Intel-based Macs
+
 
 ## The Apps
 
@@ -12,19 +18,20 @@ Any comments, suggestions? [Let us know!](https://github.com/ThatGuySam/doesitar
 
 * [VS Code](https://code.visualstudio.com/) - 🚫 Not yet, but it's currently in development. - [Issue](https://github.com/microsoft/vscode/issues/106770). 
 * [Atom](https://atom.io/) - 🚫 No, not yet. - [Issue](https://github.com/atom/atom/issues/21078). 
-* [PHPStorm](https://www.jetbrains.com/phpstorm/download/#section=mac) - ⏹ Reported to be supported day one of when Apple Silicon hardware is available for purchase. - [Official Jetbrains Issue](https://youtrack.jetbrains.com/issue/JBR-2526). 
-* [WebStorm](https://www.jetbrains.com/webstorm/download/#section=mac) - ⏹ Reported to be supported day one of when Apple Silicon hardware is available for purchase. - [Official Jetbrains Issue](https://youtrack.jetbrains.com/issue/JBR-2526). 
-* [IntelliJ Idea](https://www.jetbrains.com/idea/download/#section=mac) - ⏹ Reported to be supported day one of when Apple Silicon hardware is available for purchase. - [Official Jetbrains Issue](https://youtrack.jetbrains.com/issue/JBR-2526). 
-* [PyCharm](https://www.jetbrains.com/pycharm/download/#section=mac) - ⏹ Reported to be supported day one of when Apple Silicon hardware is available for purchase. - [Official Jetbrains Issue](https://youtrack.jetbrains.com/issue/JBR-2526). 
+* [PHPStorm](https://www.jetbrains.com/phpstorm/download/#section=mac) - ✳️ Runs via Rosetta with native support currently in development - [Official Jetbrains Issue](https://youtrack.jetbrains.com/issue/JBR-2526). 
+* [WebStorm](https://www.jetbrains.com/webstorm/download/#section=mac) - ✳️ Runs via Rosetta with native support currently in development - [Official Jetbrains Issue](https://youtrack.jetbrains.com/issue/JBR-2526). 
+* [IntelliJ Idea](https://www.jetbrains.com/idea/download/#section=mac) - ✳️ Runs via Rosetta with native support currently in development - [Official Jetbrains Issue](https://youtrack.jetbrains.com/issue/JBR-2526). 
+* [PyCharm](https://www.jetbrains.com/pycharm/download/#section=mac) - ✳️ Runs via Rosetta with native support currently in development - [Official Jetbrains Issue](https://youtrack.jetbrains.com/issue/JBR-2526). 
 * [Homebrew](https://brew.sh/) - ✳️ Yes, with caveats and some troubleshooting. - [Issue](https://github.com/Homebrew/brew/issues/7857). 
-* [Unity](https://store.unity.com/download) - ⏹ Reportedly it's already supported - [CNET Article](https://www.cnet.com/news/microsoft-365-and-adobe-creative-cloud-will-support-mac-arm-natively/#:~:text=At%20its%20annual%20Worldwide%20Developers,which%20it%20calls%20Apple%20silicon.&text=Adobe's%20Creative%20Cloud%20software%20includes,InDesign%2C%20Premiere%20Pro%20and%20Illustrator.)
+* [Unity](https://store.unity.com/download) - ✳️ Runs via Rosetta with native support currently in development - [CNET Article](https://www.cnet.com/news/microsoft-365-and-adobe-creative-cloud-will-support-mac-arm-natively/#:~:text=At%20its%20annual%20Worldwide%20Developers,which%20it%20calls%20Apple%20silicon.&text=Adobe's%20Creative%20Cloud%20software%20includes,InDesign%2C%20Premiere%20Pro%20and%20Illustrator.)
 * [Docker](https://www.docker.com/products#/mac) - ⏹ Expected to be supported at Apple Silicon launch - [Github Issue](https://github.com/docker/for-mac/issues/4733#issuecomment-653444409)
-* [Node](https://nodejs.org/en/) - ⏹ Listed as supported during Apple's Platforms State of the Union - [Platforms State of the Union Clip](https://twitter.com/blendertoday/status/1275417203303727104?lang=en)
+* [Node](https://nodejs.org/en/) - ⏹ Working on v15 with patches to previous versions in the pipeline - [Platforms State of the Union Clip](https://twitter.com/blendertoday/status/1275417203303727104?lang=en)
 * [OpenJDK](https://openjdk.java.net/install/) - 🚫 Not yet, but it's currently in development. - [JEP Ticket](https://openjdk.java.net/jeps/391) [Discussion](https://bugs.openjdk.java.net/browse/JDK-8251280)
 * [Rust](https://www.rust-lang.org/) - ✳️ Runs via Rosetta with native support currently in development. - [Issue](https://github.com/rust-lang/rust/issues/73908#issue-648613557)
 * [Go](https://golang.org/) - 🚫 Not yet, but it's currently in development. - [Issue](https://github.com/golang/go/issues/38485)
 * [OCaml](https://ocaml.org/) - 🚫 Not yet, but it's currently in beta. - [Pull Status](https://github.com/ocaml/ocaml/pull/9699)
 * [CocoaPods](https://cocoapods.org/) - ✅ Yes, it works via Rosetta 2 - [Issue](https://github.com/CocoaPods/CocoaPods/issues/9907)
+* [Sublime Text](https://www.sublimetext.com/) - ✳️ Runs via Rosetta with native builds being tested - [Forum Discussion](https://forum.sublimetext.com/t/arm-build/5882/97). 
 
 
 
@@ -59,9 +66,9 @@ Any comments, suggestions? [Let us know!](https://github.com/ThatGuySam/doesitar
 * [Cinema 4D](https://www.maxon.net/en-us/products/cinema-4d/overview/) - ✅ Yes, it was shown at the November 10th event - [Apple Nov 10 Event](https://youtu.be/5AwdkGKmZ0I?t=924)
 * [Autodesk Maya](https://www.autodesk.com/products/maya/overview) - ✳️ Yes, it was shown at WWDC running via Rosetta 2 - [WWDC Preview](https://youtu.be/GEZhD3J89ZE?t=6036)
 * [Autodesk Fusion 360](https://www.autodesk.com/products/fusion-360/overview) - ✳️ Yes, it was shown at the November 10th event running via Rosetta 2 - [Apple Nov 10 Event](https://youtu.be/5AwdkGKmZ0I?t=1114)
-* [Blender](https://www.blender.org/download/) - ⏹ Listed as supported during Apple's Platforms State of the Union - [Platforms State of the Union Clip](https://twitter.com/blendertoday/status/1275417203303727104?lang=en)
+* [Blender](https://www.blender.org/download/) - ✳️ Runs via Rosetta with native support currently in development - [Issue Tracker](https://developer.blender.org/T78710) [Platforms State of the Union Clip](https://twitter.com/blendertoday/status/1275417203303727104?lang=en)
 * [OBS](https://obsproject.com/) - 🚫 Not yet, but there has been some preparation for it. - [Mention in Issue](https://github.com/obsproject/obs-studio/pull/3444#issuecomment-690216403)
-* [Handbrake](https://handbrake.fr/) - ⏹ Ready but untested. - [Github Issue](https://github.com/HandBrake/HandBrake/issues/2951)
+* [Handbrake](https://handbrake.fr/) - ✅ Yes, natively supported as of v1.4.0  - [Github Issue](https://github.com/HandBrake/HandBrake/issues/2951)
 * [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) - ✅ Yes, it was shown at the November 10th event - [Apple Nov 10 Event](https://youtu.be/5AwdkGKmZ0I?t=950)
 * [Shaper3D](https://www.shapr3d.com/) - ✅ Yes, it was shown at the November 10th event - [Apple Nov 10 Event](https://youtu.be/5AwdkGKmZ0I?t=2211)
 
@@ -75,6 +82,7 @@ Any comments, suggestions? [Let us know!](https://github.com/ThatGuySam/doesitar
 * [Safari](https://www.apple.com/safari/) - ✅ Yes, fully supported
 * [Chrome](https://www.google.com/chrome/) - 🚫 No, not yet - [Apple Forums Issue](https://developer.apple.com/forums/thread/657657) [Google Forums Issue](https://support.google.com/chrome/thread/64355557?hl=en)
 * [Firefox](https://www.mozilla.org/en-US/firefox/new/) - ⏹ Not yet, but it's currently in development. - [Bugzilla Tracker](https://bugzilla.mozilla.org/show_bug.cgi?id=1648496)
+* [1Password](https://1password.com/) - ✳️ Runs via Rosetta with native support currently in development. - [Forum Discussion](https://1password.community/discussion/114181/will-1password-run-on-apple-silicon-based-mac)
 
 
 #### Entertainment and Media Apps
